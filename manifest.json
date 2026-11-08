@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Trademark Report Assistant",
+  "version": "9.0.1",
+  "description": "Prepare evidence-based trademark report drafts on X, Instagram and GitHub. Review and submit manually.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://help.x.com/*trademark*",
+        "https://help.twitter.com/*trademark*",
+        "https://help.instagram.com/contact/230197320740525*",
+        "https://help.instagram.com/contact/*trademark*",
+        "https://help.instagram.com/contact/*intellectual*",
+        "https://support.github.com/contact/trademark-policy*",
+        "https://help.github.com/contact/trademark-policy*"
+      ],
+      "js": [
+        "report-core.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Trademark Report Assistant</title><link rel="stylesheet" href="popup.css"></head>
+<body><header><span class="mark">TR</span><div><h1>Trademark Report Assistant</h1><p>Prepare a draft. Review every claim.</p></div></header>
+<main><p class="notice">Only report content you have reviewed and are authorised to report. A matching name alone is not proof of infringement. Signatures, declarations and submission stay manual.</p>
+<details><summary>Reporter settings · stored on this device</summary><form id="settings"><div id="profile-fields"></div><button>Save settings</button></form></details>
+<form id="case-form"><label>Platform<select id="platform"><option value="x">X</option><option value="instagram">Instagram</option><option value="github">GitHub</option></select></label>
+<label>Reported account or content URL<input id="target-url" type="url" placeholder="https://github.com/example" required></label>
+<label>Specific misleading use or confusion<textarea id="explanation" minlength="30" maxlength="6000" rows="4" required placeholder="Describe what you observed and why users could be confused."></textarea></label>
+<label>Supporting evidence<textarea id="evidence" minlength="20" maxlength="6000" rows="4" required placeholder="Provide relevant URLs, observed text, dates and other verifiable facts for this case."></textarea></label>
+<label class="check"><input id="reviewed" type="checkbox" required><span>I am the owner or an authorised representative. I have reviewed this case, its evidence and possible fair uses. This confirmation does not sign or submit a platform declaration.</span></label>
+<div class="actions"><button id="open-form" type="button" class="secondary">Open official form</button><button type="submit">Fill draft fields</button></div></form>
+<p id="status" role="status" aria-live="polite">No form data is sent until you click Fill draft fields.</p>
+<p class="small">On multi-step forms, select your role and report category yourself, then click Fill again when fields appear. Existing ordinary fields may be overwritten.</p>
+<button id="clear-data" type="button" class="secondary">Clear saved reporter data</button><p class="small">Case URL, evidence and review confirmation are not saved. Closing the popup discards them. <a href="privacy.html" target="_blank">Privacy details</a></p></main>
+<script src="report-core.js"></script><script src="popup.js"></script></body></html>
